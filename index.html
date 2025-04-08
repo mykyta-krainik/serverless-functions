@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serverless</title>
+  </head>
+  <body>
+    <h1>Serverless</h1>
+    <button id="save">Save</button>
+    <script defer>
+      document.getElementById('save').addEventListener('click', () => {
+        fetch('/api/analytics/save', { method: 'POST', body: JSON.stringify({ event: 'click' }) });
+      });
+    </script>
+  </body>
+</html>
